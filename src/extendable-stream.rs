@@ -18,3 +18,9 @@ pub trait InfiniteStream: Stream {
 }
 
 
+impl<T1, T2> FinitStream for (T1, T2) 
+where T1: Stream + FusedStream, 
+        T2: Stream + FusedStream
+{
+    
+}
